@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
-public class
-AuthController {
+public class AuthController {
 
     private final UserService userService;
 
@@ -19,5 +18,10 @@ AuthController {
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody User user) {
         return ResponseEntity.ok(userService.registerUser(user));
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> login(@RequestBody User user) {
+        return ResponseEntity.ok(userService.loginUser(user));
     }
 }

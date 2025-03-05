@@ -8,9 +8,9 @@ import java.util.List;
 @Service
 public class GreetingService {
 
-    private final GreetingRepository greetingRepository;
+    private GreetingRepository greetingRepository = null;
 
-    public GreetingService(GreetingRepository greetingRepository) {
+    public GreetingService() {
         this.greetingRepository = greetingRepository;
     }
 

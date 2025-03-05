@@ -2,8 +2,8 @@ package org.example.mygreeting.controller;
 
 import org.example.mygreeting.model.Greeting;
 import org.example.mygreeting.service.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-//import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -11,11 +11,11 @@ import java.util.List;
 @RequestMapping("/greeting")
 public class GreetingController {
 
-    private final GreetingService greetingService;
+    final private String demo= new GreetingService().toString();
 
-    public GreetingController(GreetingService greetingService) {
-        this.greetingService = greetingService;
-    }
+    @Autowired
+     GreetingService greetingService;
+
 
     @GetMapping("/{id}")
     public Greeting getGreetingById(@PathVariable Long id) {
@@ -44,3 +44,4 @@ public class GreetingController {
         return "Greeting with ID " + id + " deleted successfully!";
     }
 }
+

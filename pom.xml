@@ -8,8 +8,8 @@
         <version>3.4.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.example</groupId>
-    <artifactId>mygreeting</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>greeting-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>greeting-app</name>
     <description>greeting project for Spring Boot</description>
@@ -27,7 +27,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>23</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
