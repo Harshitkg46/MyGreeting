@@ -3,6 +3,7 @@ package org.example.mygreeting.controller;
 import org.example.mygreeting.model.Greeting;
 import org.example.mygreeting.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
+//import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -43,4 +44,3 @@ public class GreetingController {
         return "Greeting with ID " + id + " deleted successfully!";
     }
 }
-
